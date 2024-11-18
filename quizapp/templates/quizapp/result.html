@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'quizapp/styles.css' %}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff; /* Light cyan background */
+        }
+        .container {
+            max-width: 300px;
+            padding: 30px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px; /* Slightly larger font for emphasis */
+            margin-bottom: 20px; /* Space below the heading */
+            color: #F4C430; /*saffron*/
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your score: {{ total_score }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" name="back">Back</button>
+        </form>
+    </div>
+</body>
+</html>
