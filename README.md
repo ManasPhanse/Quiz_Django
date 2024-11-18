@@ -1,2 +1,3 @@
 # Quiz_Django
-used django framework
+Hello all,
+I used django framework to create this fun quiz app
